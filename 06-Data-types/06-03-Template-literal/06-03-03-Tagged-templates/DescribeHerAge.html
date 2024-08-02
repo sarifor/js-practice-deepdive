@@ -1,0 +1,20 @@
+<script>
+  // # Tagged Templates
+  // - 태그 함수를 사용하면, 템플릿 리터럴을 함수로 파싱할 수 있음
+
+  const charactor = "Hello Kitty";
+  const age = 5;
+
+  // 예: Hello Kitty is 5-year-old. Is she baby or not? Describe!
+  function describeHerAge(strings, name, age) {
+    console.log(strings, name, age);
+    if (age > 5) {
+      return "Young lady!";
+    } else {
+      return "Baaaaby";
+    }
+  }
+
+  const result = describeHerAge`Look at her! ${charactor} would be ${age}!`;
+  console.log(result);
+</script>
