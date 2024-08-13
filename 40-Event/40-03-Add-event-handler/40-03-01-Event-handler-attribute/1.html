@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <!-- 
+    # Event Handler Attribute
+    - 함수 참조가 아닌, 함수 호출문 등의 '문'을 할당
+    - onclick="printHi('Sarifor')" 어트리뷰트는 파싱되어 함수 암묵적 생성
+    - 이벤트 핸들러에 인수를 전달하기 위함
+   -->
+  <button onclick="printHi('Sarifor')">Click!</button>
+  <script>
+    function printHi(name) {
+      alert(`hi! ${name}!`);
+    }
+  </script>
+</body>
+</html>
