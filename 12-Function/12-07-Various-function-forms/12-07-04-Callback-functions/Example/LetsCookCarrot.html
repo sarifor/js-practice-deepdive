@@ -1,0 +1,27 @@
+<html>
+<body>
+  <script>
+    // 예: 당근 주스와 당근 케이크 만들기
+    
+    // 전달받은 식재료를 전달받은 요리법으로 처리
+    // - 고차 함수
+    function cook(ingredient, recipe) {
+      return recipe(ingredient)
+    }
+
+    // 주스로 만드는 요리법
+    // - 콜백 함수
+    const juice = function(ingredient) {
+      return `${ingredient} is changed to juice!`;
+    }
+    console.log(cook("carrot", juice));
+
+    // 케이크로 만드는 요리법
+    // - 콜백 함수
+    const cake = function(ingredient) {
+      return `${ingredient} is changed to cake!`;
+    }
+    console.log(cook("carrot", cake));
+  </script>
+</body>
+</html>

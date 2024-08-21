@@ -1,0 +1,24 @@
+<html>
+<body>
+  <script>
+    // 예: 자바스크립트는 리액트에도 Next.js에도 쓰임
+    // - 콜백 함수를 다른 곳에서도 호출할 필요가 있는 경우
+    // - 함수 외부에서 콜백 함수를 정의한 후, 함수 참조를 고차 함수에 전달
+    // - 콜백 함수는 단 한 번만 생성
+    const jsLang = function javaScriptFunction(other) {
+      return `JavaScript is used for ${other}`;
+    }
+
+    function react(js) {
+      return console.log(js("React"));
+    }
+
+    function nextJs(js) {
+      return console.log(js("Next.js"));
+    }
+
+    react(jsLang);
+    nextJs(jsLang);
+  </script>
+</body>
+</html>

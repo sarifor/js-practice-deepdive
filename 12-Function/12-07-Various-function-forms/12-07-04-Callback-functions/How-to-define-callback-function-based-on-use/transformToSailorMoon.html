@@ -1,0 +1,22 @@
+<html>
+<body>
+  <script>
+    // 예: 우사기가 세일러문으로 변신
+    // - 고차 함수 내부에서만 호출되는 콜백 함수를
+    //   익명 함수 리터럴로 정의하여 곧바로 전달
+    // - 콜백 함수는 고차 함수가 호출될 때마다 생성
+    function usagi(magicalWord, fn) {
+      return fn(magicalWord);
+    }
+
+    const result = usagi(
+      "Moon Prizm power make up!", 
+      (magicalWord) => { 
+        return `She transformed to Sailor Moon by shouting '${magicalWord}'`;
+      }  
+    )
+
+    console.log(result);
+  </script>
+</body>
+</html>
