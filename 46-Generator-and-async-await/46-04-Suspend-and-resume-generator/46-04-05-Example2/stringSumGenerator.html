@@ -1,0 +1,24 @@
+<html>
+<body>
+  <script>
+    // 예: 문자열 더하기
+    // - next("first")  -> console.log('sum ... '), yield
+    // - next("second") -> let a, yield
+    // - next("third")  -> let b, yield a + b
+    // - next("forth")  -> X
+    function* stringSumGenerator() {
+      console.log('sumGenerator is created!');
+      let a = yield;
+      let b = yield;
+      yield a + b;
+    }
+
+    const sum = stringSumGenerator();
+
+    console.log("1st: ", sum.next("first")); // sumGenerator is created!  1st: {value: undefined, done: false}
+    console.log("2nd: ", sum.next("second")); // 2nd: {value: undefined, done: false}
+    console.log("3st: ", sum.next("third")); // 3rd: {value: 'secondthird', done: false}
+    console.log("4th: ", sum.next("forth")); // 4th: {value: undefined, done: true}
+  </script>
+</body>
+</html>

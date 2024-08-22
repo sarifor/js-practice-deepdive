@@ -1,0 +1,24 @@
+<html>
+<body>
+  <script>
+    // 예: 오늘 밤 내가 할 일 출력
+    // - next 메서드를 호출하면 yield 표현식까지만 실행되고 일시 중지(suspend)됨
+    // - 이때 함수의 제어권이 호출자로 양도(yield)됨
+    // - next 메서드를 호출하면 value, done 프로퍼티를 갖는 이터레이터 리절트 객체 반환
+    function* toDoThingsTonight() {
+      console.log("Generator starts!")
+      yield "Read blog";
+      yield "Have dinner";
+      yield "Do laundry";
+    }
+
+    const generator = toDoThingsTonight();
+
+    console.log(generator.next()); // Generator starts!  { "value": "Read blog", "done": false }
+    console.log(generator.next()); // { "value": "Have dinner", "done": false }
+    console.log(generator.next()); // { "value": "Do laundry", "done": false }
+    console.log(generator.next()); // { "value": undefined, "done": true }
+    console.log(generator.next()); // { "value": undefined, "done": true }
+  </script>
+</body>
+</html>
