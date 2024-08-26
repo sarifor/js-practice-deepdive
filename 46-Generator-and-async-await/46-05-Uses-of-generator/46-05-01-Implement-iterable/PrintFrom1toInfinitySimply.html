@@ -1,0 +1,23 @@
+<html>
+<body>
+  <script>
+    // 예: 1부터 시작해서 무한정 수를 생성하는 함수
+    // - 제네레이터로 무한 반복의 개념을 구현하면서도, 함수 실행을 손쉽게 일시 정지/재개할 수 있음
+    function* printFrom1toInfinitySimply() {
+      let i = 0;
+
+      while(true) {
+        i += 1;
+        yield i
+      }
+    }
+    
+    const generator = printFrom1toInfinitySimply();
+
+    console.log(generator.next().value); // 1
+    console.log(generator.next().value); // 2
+    console.log(generator.next().value); // 3
+    console.log(generator.next().value); // 4
+</script>
+</body>
+</html>
