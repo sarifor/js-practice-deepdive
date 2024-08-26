@@ -1,0 +1,15 @@
+<html>
+<body>
+  <script>
+    // 예: 단순주의자
+    // - 화살표 함수로는 제네레이터를 만들 수 없음:
+    //   Uncaught SyntaxError: Unexpected token '*'
+    // - 화살표 함수의 용도는 간단한 함수 표현을 위함이지, 복잡한 객체를 생성하기 위함이 아님
+    const simplisticThinker = * () => {
+      yield 'Think simple!';
+    }
+    const g = simplisticThinker();
+    g.next();
+  </script>
+</body>
+</html>
