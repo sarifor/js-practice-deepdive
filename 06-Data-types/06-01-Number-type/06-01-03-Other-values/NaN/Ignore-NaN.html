@@ -1,0 +1,21 @@
+<html>
+<body>
+  <script>
+    // 예: 숫자를 입력했는지 여부를 검증하기
+    // - NaN: 산술 연산 불가. Not-a-number
+    
+    function isNumber(num) {
+      let number = parseFloat(num);
+
+      if (isNaN(number)) {
+        return "Please input number";
+      } else {
+        return "Thank you for inputting number";
+      }
+    }
+
+    console.log(isNumber("suuzi")); // Please input number
+    console.log(isNumber(12345)); // Thank you for inputting number
+  </script>
+</body>
+</html>

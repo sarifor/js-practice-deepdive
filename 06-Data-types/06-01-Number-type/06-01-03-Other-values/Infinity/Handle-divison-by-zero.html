@@ -1,0 +1,18 @@
+<html>
+<body>
+  <script>
+    // 예: 계산 과정에서 Infinity 발생 시 감지하기
+    // - Inifinity: 어떤 숫자가 양의 방향으로 끝없이 커지는 값. 양의 무한대
+
+    function safeDivision(a, b) {
+      if (b === 0) {
+        return Infinity;
+      }
+      return a / b;
+    }
+
+    console.log(safeDivision(5, 0));
+    
+  </script>
+</body>
+</html>
