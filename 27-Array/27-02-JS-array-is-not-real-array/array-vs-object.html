@@ -1,0 +1,25 @@
+<html>
+<body>
+  <script>
+    // 배열과 일반 객체의 성능 테스트
+    // - 배열이 일반 객체보다 약 2배 정도 빠름
+    // - 실제로 테스트해 보면 오히려 객체가 더 빠를 때도 있음
+
+    const arr = [];
+
+    console.time("Array performance");
+    for(let i = 0; i < 1000000; i++) {
+      arr[i] = i;
+    }
+    console.timeEnd("Array performance"); // Array performance: 17.625 ms(일정 X)
+    
+    const obj = {};
+
+    console.time("Object performance");
+    for(let i = 0; i < 1000000; i++) {
+      obj[i] = i;
+    }
+    console.timeEnd("Object performance"); // Object performance: 22.820068359375 ms(일정 X)
+  </script>
+</body>
+</html>
