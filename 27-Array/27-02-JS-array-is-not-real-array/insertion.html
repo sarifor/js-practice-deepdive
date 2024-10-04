@@ -1,0 +1,13 @@
+<html>
+<body>
+  <script>
+    // 예: 고로 씨가 중간에 새치기(요소 삽입)
+    // - 요소를 중간에 삽입하면 그 뒤의 요소가 밀림
+    const peopleToWait = ["Ichiro", "Jiro"];
+
+    peopleToWait.splice(1, 0, "Goro");
+    
+    console.log(peopleToWait); // ["Ichiro", "Goro", "Jiro"]
+  </script>
+</body>
+</html>
